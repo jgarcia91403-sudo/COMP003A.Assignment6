@@ -1,4 +1,5 @@
-﻿namespace COMP003A.Assignment6
+﻿using System;
+namespace COMP003A.Assignment6
 {
     internal class Program
     {
@@ -14,7 +15,20 @@
                 Console.WriteLine("1. Display all books");
                 Console.WriteLine("2. update one book");
                 Console.WriteLine("3. Exite");
-                Console.
+                Console.Write("Enter choice:");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        Console.WriteLine();
+                        Console.WriteLine(" Book 1:");
+                        book1.DisplayBook();
+                        Console.WriteLine(" Book 2:");
+                        book2.DisplayBook();
+                        Console.WriteLine(" Book 3:");
+                        book3.DisplayBook();
+                        break;
+                }
             }
         }
     }
