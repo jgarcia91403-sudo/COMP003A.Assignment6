@@ -16,6 +16,10 @@ namespace COMP003A.Assignment6
         {
             Console.WriteLine(" Title=" + Title + ", Pages=" + pages + ", Completed=" + Completed);
         }
+        public void ToggleCompleted()
+        {
+            Completed = !Completed;
+        }
     }
     internal class Program
     {
@@ -47,18 +51,18 @@ namespace COMP003A.Assignment6
                     case 2:
                         Console.Write("Select book (1-3): ");
                         int bookSelection = Convert.ToInt32(Console.ReadLine());
-                        switch (bookselection)
+                        switch (bookSelection)
                         {
                             case 1:
-                                book1.ToggleComplete();
+                                book1.ToggleCompleted();
                                 Console.WriteLine(" Book 1 update. ");
                                 break;
                             case 2:
-                                book2.ToggleComplete();
+                                book2.ToggleCompleted();
                                 Console.WriteLine(" Book 2 update. ");
                                 break;
                             case 3:
-                                book3.ToggleComplete();
+                                book3.ToggleCompleted();
                                 Console.WriteLine(" Book 3 update. ");
                                 break;
 
