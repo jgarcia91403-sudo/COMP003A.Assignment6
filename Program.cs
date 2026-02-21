@@ -6,10 +6,10 @@ namespace COMP003A.Assignment6
         public string Title;
         public int pages;
         public bool Completed;
-        public Book(string title, int pages, bool completed)
+        public Book(string title, int Pages, bool completed)
         {
             Title = title;
-            pages = pages;
+            pages = Pages;
             Completed = completed;
         }
         public void DisplayBook()
@@ -35,6 +35,7 @@ namespace COMP003A.Assignment6
                 Console.WriteLine("3. Exite");
             while (!exitProgram)
             {
+                Console.WriteLine();
                 Console.Write("Enter choice:");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -49,6 +50,7 @@ namespace COMP003A.Assignment6
                         book3.DisplayBook();
                         break;
                     case 2:
+                        Console.WriteLine();
                         Console.Write("Select book (1-3): ");
                         int bookSelection = Convert.ToInt32(Console.ReadLine());
                         switch (bookSelection)
