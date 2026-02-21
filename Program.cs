@@ -14,7 +14,7 @@ namespace COMP003A.Assignment6
         }
         public void DisplayBook()
         {
-            Console.WriteLine(" Title=" + Title + ", Pages=" + pages + ", Completed=" + Completed);
+            Console.WriteLine(" Title:" + Title + ", Pages:" + pages + ", Completed:" + Completed);
         }
         public void ToggleCompleted()
         {
@@ -29,12 +29,12 @@ namespace COMP003A.Assignment6
             Book book2 = new Book("clean code", 464, true);
             Book book3 = new Book("The pragmatic Programer", 352, false);
                 bool exitProgram = false;
-            while (!exitProgram)
-            {
                 Console.WriteLine();
                 Console.WriteLine("1. Display all books");
                 Console.WriteLine("2. update one book");
                 Console.WriteLine("3. Exite");
+            while (!exitProgram)
+            {
                 Console.Write("Enter choice:");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
