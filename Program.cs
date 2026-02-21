@@ -1,13 +1,29 @@
 ﻿using System;
 namespace COMP003A.Assignment6
 {
+    class Book
+    {
+        public string Title;
+        public int pages;
+        public bool Completed;
+        public Book(string title, int pages, bool completed)
+        {
+            Title = title;
+            pages = pages;
+            Completed = completed;
+        }
+        public void DisplayBook()
+        {
+            Console.WriteLine(" Title=" + Title + ", Pages=" + pages + ", Completed=" + Completed);
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Book book1 = new Book("");
-            Book book2 = new Book("");
-            Book book3 = new Book("");
+            Book book1 = new Book("Atomic Habits", 320, false);
+            Book book2 = new Book("clean code", 464, true);
+            Book book3 = new Book("The pragmatic Programer", 352, false);
                 bool exitProgram = false;
             while (!exitProgram)
             {
